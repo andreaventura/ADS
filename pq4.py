@@ -68,7 +68,7 @@ def greedy_scs(ss, min_len=40):
                 max_overlap=numpy.argmax([olap[1] for olap in node])#the sequence with greatest overlap with each node
                 overlaps.append(max_overlap)
             else: overlaps.append([])
-                
+
         go_index=numpy.argmax(overlaps) #get the index of the node with the greatest overlap
         node=graph[go_index] #node having the greatest overlap
         go_seq_a=ss[go_index] #5'seq
@@ -79,3 +79,5 @@ def greedy_scs(ss, min_len=40):
 
 
     return ograph
+
+    #test
